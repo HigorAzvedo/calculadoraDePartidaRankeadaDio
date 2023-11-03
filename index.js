@@ -1,27 +1,27 @@
-let nivel = calcularNivel(50,10)
+let level = calcLevel(100,10)
 let newRanked = ranked()
 
-function calcularNivel(vitorias = 0, derrotas = 0){
-    let saldoDeVitorias = vitorias - derrotas
-    return saldoDeVitorias
+function calcLevel(wins = 0, defeats = 0){
+    let WinBalance = wins - defeats
+    return WinBalance
 }
 
 function ranked(){
-    if(nivel < 10){
+    if(level < 10){
         return "Ferro"
-    }else if(nivel < 20){
+    }else if(level < 20){
         return "Bronze"
-    }else if(nivel < 50){
+    }else if(level < 50){
         return "Prata"
-    }else if(nivel < 80){
+    }else if(level < 80){
         return "Ouro"
-    }else if(nivel < 90){
+    }else if(level < 90){
         return "Diamante"
-    }else if(nivel < 100){
+    }else if(level < 100){
         return "Lendario"
     }else {
         return "Imortal"
     }
 }
 
-console.log(`O Heroi tem saldo de ${nivel} e esta no nivel ${newRanked}`)
+console.log(`O Heroi tem saldo de ${level} e esta no nivel ${newRanked}`)
